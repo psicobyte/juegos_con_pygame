@@ -10,11 +10,19 @@ Para cargar imágenes tenemos pygame.image.load(), que importa un archivo de ima
 Imagen= pygame.image.load("ruta/al/archivo/de/imagen.jpg")
 ```
 
-Esto crea un objeto *surface* que podemos usar en nuestro juego.
+Esto crea un objeto `surface` que podemos usar en nuestro juego.
 
-Para posicionar un gráfico en pantalla de la Ventana (que es una `surface`), usaremos el método `blit` pasándole como parámetros la imagen (otra `surface`) que quremos cargar y una tupla con sus coordenadas.
+El efecto contrario (guardar una `surface` a un archivo) se hace mediante pygame.image.save(), que se usa del sigueinte modo:
 
-> Lo que hace blit, en realidad, es pegar unas imágenes en otras. En nuestro caso, sobre Ventana. De este modo, lo que estamos haciendo es crear una sola imagen para, posteriormente, dibujar todo de una sola vez.  
+```
+pygame.image.load(Imagen,"ruta/al/archivo/de/imagen.jpg")
+```
+
+> El método "save" sólo soporta los formatos *.bmp, *.tga, *.png y *.jpeg.
+
+Para posicionar un gráfico en pantalla de la Ventana (que es una `surface`), usaremos el método `blit` pasándole como parámetros la imagen (otra `surface`) que queremos cargar y una tupla con sus coordenadas.
+
+> Lo que hace blit, en realidad, es pegar unas imágenes en otras. En nuestro caso, sobre Ventana. De este modo, lo que estamos haciendo es crear una sola imagen para, posteriormente, dibujar todo de una sola vez.
 > Esto acelera el redibujado de gráficos y mejora el rendimiento, además de aprovechar algunas capacidades de aceleración por hardware. [Ver más acerca de la técnica del blitting](http://es.wikipedia.org/wiki/Bit_blit)
 
 ```
@@ -22,11 +30,11 @@ Ventana.blit(Fondo, (0, 0))
 ```
 
 > Unas notas acerca de las coordenadas:
-> Las coordenadas se miden en pixels desde la esquina superior izquierda de la pantalla, e indican dónde se ubicará la esquina superior izquierda de la imagen.
+> Las coordenadas se miden en pixels desde la esquina superior izquierda de la pantalla (o de la imagen sobre las que las midamos), e indican dónde se ubicará la esquina superior izquierda de la imagen.
 > La primera coordenada de la tupla es el eje X (horizontal) y la segunda es el eje Y (vertical).
 > Respecto al eje Z (es decir, la profundidad: qué imágenes se dibujarán encima de cuáles), las imágenes se muestran en el orden en el que se ubican con blit, de modo que las últimas se mostrarán *sobre* las anteriores.
 
-Sólo posicionar las imágenes **no las muestra**. Hace falta indicarle a Pygame que debe redibujarlas, para lo que tenemos la instrucción `flip()`, que se usa de este modo:
+Sólo posicionar las imágenes **no las muestra**. Hace falta indicarle a Pygame que debe redibujarlas, para lo que tenemos la instrucción `pygame.display.flip()`, que actualiza la ventana completa y se usa de este modo:
 
 ```
 pygame.display.flip()
@@ -34,7 +42,7 @@ pygame.display.flip()
 
 Vamos a ver cómo funciona todo esto junto.
 
-Para los siguientes ejemplos vamos a usar una imagen de fondo que es obra de [Lil-Mz](http://www.deviantart.com/morelikethis/125969509) y se distribuye con una licencia Creative Commons BySA que permite su uso.
+Para los siguientes ejemplos vamos a usar una imagen de fondo que es obra de [Lil-Mz](http://www.deviantart.com/morelikethis/125969509) y se distribuye con una licencia Creative Commons BySA que permite su reutilización.
 
 ![fondo.jpg](../img/fondo.jpg)
 
@@ -97,7 +105,7 @@ transparente = MiImagen.get_at((0, 0))
 MiImagen.set_colorkey(transparente)
 ```
 
-Para que esto funcione es necesario que la imagen tenga un color de fondo uniforme y que, además, ese color no se use en el resto de la imagen (porque esa perte también se vería transparente).
+Para que esto funcione es necesario que la imagen tenga un color de fondo uniforme y que, además, ese color no se use en el resto de la imagen (porque esa parte también se vería transparente).
 
 Puedes usar esta imagen en formto GIF para practicar:
 
