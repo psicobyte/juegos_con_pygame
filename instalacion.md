@@ -1,6 +1,11 @@
 ##Instalación
 
-Para la creación de un entorno de desarrollo decente en GNU/Linux es necesario trabajar sobre una máquina con una distribución reciente. De esta manera evitaremos luchar con viejos problemas y dependencias. Para las siguientes instrucciones, se supone que se ha instalado Ubuntu 11.10 (o superior) en el equipo.
+
+pygame está desarrollado sobre python 2.7.X (no hay que confundirlo con  python 3.X), de modo que debe estar instalado para poder usarse. 
+
+En ordenadores con sistema operativo GNU/Linux python puede instalarse desde los propios repositorios de la distribución.
+
+
 
 Para distribuciones basadas en Debian, necesitaremos instalar el paquete python-pygame. “apt-get” se encargara de instalar las dependencias necesarias.
 
