@@ -2,9 +2,13 @@
 
 La programación de videojuegos es, al mismo tiempo, una de las tareas más atractivas y una de las más complejas de la informática.
 
-La mayoría de aquellos que un día se sintieron atraídos por la programación lo hiceron a través de los videojuegos. 
+La mayoría de aquellos que un día se sintieron atraídos por la programación lo hiceron a través de los juegos de ordenador. Probablemente la idea en la mente de casi todo aquel que se adentre en la programación sea acabar creando videojuegos.
 
+Los videojuegos son, de entre todas las clases de aplicaciones informáticas, la categoría que tiene más variedad y la que ofrece más oportunidades para hacer cosas distintas.
 
+Son además, hoy por hoy, uno de los mercados económicamente más atractivos y que ofrecen más oportunidades de negocio.
+
+Por último, y casi por definición, los juegos de ordenador son entretenidos, divertidos por sí mismos.
 
 La programación de videojuegos es una tarea compleja porque requiere de una variadad de habilidades y talentos muy amplia.
 
