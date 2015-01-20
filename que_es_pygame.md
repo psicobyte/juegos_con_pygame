@@ -1,11 +1,9 @@
-##Introducción
+##¿Qué es Pygame?
 
-Pygame es un conjunto de módulos que nos ayudan a crear videojuegos o aplicaciones gráficas (no necesariamente videojuegos) en dos dimensiones. Pygame incluye gráficos y bibliotecas de sonido diseñados para ser utilizados directamente bajo Python.
+Pygame es un paquete de Python, un conjunto de módulos ideado para ayudarnos a crear videojuegos o aplicaciones gráficas (no necesariamente videojuegos) en dos dimensiones.
 
-Está construido bajo Simple DirectMedia Layer (SDL), que a su vez son un conjunto de bibliotecas desarrolladas en lenguaje C, proporcionando las funciones básicas para realizar operaciones de dibujado 2D, gestión de efectos de sonido y música, y carga y gestión de imágenes.
+Aunque está hecho para trabajar en Python, Pygame usa las librerías de [Simple DirectMedia Layer](http://www.libsdl.org/) (SDL), escritas en lenguaje C, para acceder a bajo nivel a los dispositivos del sistema en el que se ejecuta, tales como dispositivos gráficos, de audio, ratón, joystick*, etc, añadiendo una capa que obvia los detalles más complejos e innecesarios y simplifica la programación. Esto permite aunar la comodidad de programar en un lenguaje como Python con la eficiencia y velocidad de C para las tareas más críticas.
 
-De esta manera, a través de Pygame podemos abstraernos de la lógica del juego (o aplicación) en si mismo, haciendo posible el uso de un lenguaje de alto nivel como Python para estructurar el juego.
+Pygame está soportado ofricialmente por las plataformas Linux, Windows, Windows CE, BeOS, MacOS, Mac OS X, FreeBSD, NetBSD, OpenBSD, BSD/OS, Solaris, IRIX, y QNX. También está soportado, aunque no de manera no oficial, por AmigaOS, Dreamcast, Atari, AIX, OSF/Tru64, RISC OS, SymbianOS, y OS/2. Prácticamente cualquier cosa donde pueda funcionar Python puede usar Pygame.
 
-Pygame fue construido como sustituto de pySDL, después del poco éxito del mismo, ya que la forma de interactuar no llegó a recoger tantas opciones y tan simples como las del entorno de Pygame.
 
-Escrito originalmente por Shinners Pete, se distribuye bajo la GNU Lesser General Public License. Desde 2004 se trata de un proyecto de código abierto de la comunidad de software libre. 
