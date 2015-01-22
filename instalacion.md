@@ -11,7 +11,7 @@ En ordenadores con sistema operativo GNU/Linux, **Pygame** puede instalarse desd
 
 Para distribuciones basadas en Debian (Ubuntu, Linux Mint), necesitaremos instalar el paquete *python-pygame*. `apt-get` se encargara de instalar las dependencias necesarias.
 
-```
+```bash
 # apt-get install python-pygame
 ```
 
@@ -24,7 +24,7 @@ para la versón de **Python 2.7.X**
 
 O con:
 
-```
+```bash
 # pacman -S python-pygame-hg
 ```
 para la versión de **Python 3.X**
@@ -32,7 +32,7 @@ para la versión de **Python 3.X**
 
 En Fedora (y Red Hat), usando `yum`:
 
-```
+```bash
 # yum install python-pygame
 ```
 
@@ -55,7 +55,7 @@ En Macintosh se puede instalar **Pygame** ejecutando el archivo de instalación 
 
 Como cualquier otro módulo de **Python**, también es posible instalarlo en cualquier sistema operativo usando `pip` de este modo:
 
-```
+```bash
 # pip install pygame
 ```
 
