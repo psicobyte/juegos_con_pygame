@@ -1,6 +1,6 @@
 ##Instalación
 
-**Pygame** está desarrollado sobre **Python 2.7.X**, que es el que se usara en los ejemplos de este libro, aunque también hay una versión (ligeramente más limitada en algunos aspectos) para Python **3.X**.
+**Pygame** está desarrollado sobre **Python 2.7.X**, que es el que se usara en los ejemplos de este libro, aunque también hay una versión (ligeramente más limitada en algunos aspectos) para **Python 3.X**.
 
 Además de **Python**, naturalmente, hace falta instalar el propio **Pygame**.
 
@@ -11,6 +11,21 @@ Para distribuciones basadas en Debian (Ubuntu, Linux Mint), necesitaremos instal
 ```
 # apt-get install python-pygame
 ```
+
+En Archlinux se puede instalar con el gestor de paquetes `pacman` del siguente modo:
+
+```bash
+# pacman -S python2-pygame
+```
+para la versón de **Python 2.7.X**
+
+O con:
+
+```
+# pacman -S python-pygame-hg
+```
+para la versión de **Python 3.X**
+
 
 Para instalar **Pygame** en Windows sólo hay que acceder a la [página de descargas oficial de Pygame](http://www.pygame.org/download.shtml) y descargar el archivo de instalación (*\*.msi*) correspondiente. Una vez descargado, sólo hay que ejecutarlo como cualquier otra instalación de software para Windows.
 
