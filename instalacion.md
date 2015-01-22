@@ -12,6 +12,11 @@ Para distribuciones basadas en Debian (Ubuntu, Linux Mint), necesitaremos instal
 # apt-get install python-pygame
 ```
 
+Para instalar **Pygame** en Windows sólo hay que acceder a la [página de descargas oficial de Pygame](http://www.pygame.org/download.shtml) y descargar el archivo de instalación (*\*.msi*) correspondiente. Una vez descargado, sólo hay que ejecutarlo como cualquier otra instalación de software para Windows.
+
+> Existe una versión de 64 bits que actualmente está en fase de *pre release*. Al estar aún en pruebas y no ser completamente funcional, es preferible utilizar la versión de 32 bits, para lo que es necesario que la versión instalada de **Python** también sea de 32 bits.
+
+
 Como cualquier otro módulo de **Python**, también es posible instalarlo en cualquier sistema operativo usando `pip` de este modo:
 
 ```
