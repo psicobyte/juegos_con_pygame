@@ -1,4 +1,4 @@
-##¡Hola pyGame!
+##¡Hola Pygame!
 
 Vamos a dar nuestros primeros pasos en la programación de videojuegos con Pygame usando un clásico "Hola Mundo".
 
@@ -60,11 +60,13 @@ while True:
                 sys.exit()
 ```
 
-Para empezar, debes notar que estamos importando "pygame.locals" justo después de importar a la librería Pygame (Bueno, también hemos importado "sys", pero esa librería no debería necesitar explicación).
+Para empezar, debes notar que estamos importando `pygame.locals` justo después de importar la librería `pygame` (Bueno, también hemos importado `sys`, pero esa librería no debería necesitar explicación).
 
-Se trata de una serie de constantes que contienen los códigos para poder acceder a las teclas, eventos de ratón, etc. En nuestro ejemplo usaremos la tecla Escape.
+Se trata de una serie de constantes que contienen los códigos para poder acceder a las teclas, eventos de ratón, etc, y que usaremos como *alias* para referirnos aellos. En nuestro ejemplo usaremos la tecla Escape.
 
-En este ejemplo usamos un bucle infinito que mantiene el programa en ejecución, por lo que nuestra ventana no se cierra.
+> Los nombres de las constantes de tecla están siempre formados por el prefijo "K_" seguido de la tecla a la que se refiere. Por ejemplo K_a, K_f, K_ESCAPE o K_UP.
+
+En este ejemplo usamos un bucle infinito (normalmente llamado bucle de eventos) que mantiene el programa en ejecución, por lo que nuestra ventana no se cierra.
 
 En cada ciclo del bucle infinito estamos usando pygame.event.get(), que nos retorna los eventos de Pygame que estén ocurriendo.
 
@@ -77,3 +79,8 @@ Como práctica, puedes intentar hacer que funcione teniendo en cuenta que la con
 Como ya te estarás imaginado, prácticamente toda la interacción que hagamos con nuestro juego en Pygame se hará por medio de eventos.
 
 Puedes verlos todos en esta [lista completa de eventos de pygame](http://www.pygame.org/docs/ref/event.html)
+
+> Como veremos más adelante, todos nuestros juegos con **Pygame** van a tener un bucle de eventos con la misma estructura básica. similar a esto:
+> Comprobar eventos
+> Hacer cosas en base a esos eventos
+> Redibujar la pantalla
