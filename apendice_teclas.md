@@ -89,13 +89,13 @@ K_KP_ENTER            enter (teclado numérico)
 K_KP_EQUALS           = (teclado numérico)
 K_UP                  flecha arriba (up)
 K_DOWN                flecha abajo (down)
-K_RIGHT               flecha izquierda (right)
-K_LEFT                flecha derecha (left)
-K_INSERT              insert
-K_HOME                home
-K_END                 end
-K_PAGEUP              page up
-K_PAGEDOWN            page down
+K_RIGHT               flecha derecha (right)
+K_LEFT                flecha izquierda (left)
+K_INSERT              insertar
+K_HOME                inicio
+K_END                 fin
+K_PAGEUP              avance página
+K_PAGEDOWN            retroceso página
 K_F1                  F1
 K_F2                  F2
 K_F3                  F3
@@ -114,14 +114,14 @@ K_F15                 F15
 K_NUMLOCK             bloqueo números
 K_CAPSLOCK            bloqueo mayúsculas
 K_SCROLLOCK           scrollock
-K_RSHIFT              mayúsculas (izquierda)
-K_LSHIFT              mayúsculas (derecha)
-K_RCTRL               control (izquierda)
-K_LCTRL               control (derecha)
-K_RALT                alt (izquierda)
-K_LALT                alt (derecha)
-K_RMETA               meta (izquierda, sólo apple)
-K_LMETA               meta (derecha, sólo apple)
+K_RSHIFT              mayúsculas (derecha)
+K_LSHIFT              mayúsculas (izquierda)
+K_RCTRL               control (derecha)
+K_LCTRL               control (izquierda)
+K_RALT                alt (derecha)
+K_LALT                alt (izquierda)
+K_RMETA               meta (derecha, sólo apple)
+K_LMETA               meta (izquierda, sólo apple)
 K_LSUPER              tecla windows (izquierda)
 K_RSUPER              tecla windows (derecha)
 K_MODE                mode shift
