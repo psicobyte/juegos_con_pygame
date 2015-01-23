@@ -30,7 +30,7 @@ Para poder manejar nuestro programa, necesitaremos un bucle de eventos. Un bucle
 
 Veamoslo con un ejemplo algo más complejo:
 
-```
+```python
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
@@ -64,7 +64,7 @@ Para empezar, debes notar que estamos importando `pygame.locals` justo después 
 
 Se trata de una serie de constantes que contienen los códigos para poder acceder a las teclas, eventos de ratón, etc, y que usaremos como *alias* para referirnos aellos. En nuestro ejemplo usaremos la tecla Escape.
 
-> Los nombres de las constantes de tecla están siempre formados por el prefijo "K_" seguido de la tecla a la que se refiere. Por ejemplo K_a, K_f, K_ESCAPE o K_UP.
+> Los nombres de las constantes de tecla están siempre formados por el prefijo "K\_" seguido de la tecla a la que se refiere. Por ejemplo K\_a, K\_f, K\_ESCAPE o K\_UP.
 
 En este ejemplo usamos un bucle infinito (normalmente llamado bucle de eventos) que mantiene el programa en ejecución, por lo que nuestra ventana no se cierra.
 
@@ -84,3 +84,4 @@ Puedes verlos todos en esta [lista completa de eventos de pygame](http://www.pyg
 > Comprobar eventos
 > Hacer cosas en base a esos eventos
 > Redibujar la pantalla
+> Y vuelta a empezar...
