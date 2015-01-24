@@ -136,7 +136,7 @@
 
 Las teclas marcadas con un asterisco (*) no aparecen en la distirbución de teclas en español. Las teclas marcadas como [APPLE] son propias de este sistema.
 
-Estas constantes están concebidas para la distribucoón de teclado de Estados Unidos. No hay, por tanto, constantes definidas para acceder a teclas carácterísticas del teclado español.
+Estas constantes están concebidas para la distribución de teclado de Estados Unidos. No hay, por tanto, constantes definidas para referise a teclas carácterísticas del teclado español.
 
 Para acceder a otras teclas se puede usar directamente el valor numérico de la tecla, como por ejemplo:
 
@@ -148,4 +148,6 @@ Para acceder a otras teclas se puede usar directamente el valor numérico de la 
 | 231 | ç |
 | 241 | ñ |
 
-Otra opción es usar los valores unicode, aunque esto distinguirá entre mayúculas y minúsculas.
+Otra opción para identificar la tecla pulsada es usar los valores unicode, aunque esto distinguirá entre mayúculas y minúsculas.
+
+Es importante recordar que algunas teclas no aparecerán o se mostrarán de modo distinto en algunos teclados (por ejemplo, en teclados de ordenadores portátiles). Además, ciertas teclas como "imprimir pantalla", normalmente, son capturadas por el sistema operativo. Es mejor evitar el uso de estas en nuestros juegos.
