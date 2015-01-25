@@ -2,7 +2,7 @@
 
 Vamos a dar nuestros primeros pasos en la programación de videojuegos con Pygame usando un clásico "Hola Mundo".
 
-```
+``` {.python .numberLines}
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
@@ -13,7 +13,7 @@ import pygame
 pygame.init()
 
 # Creamos una surface (la ventana de juego), asignándole un alto y un ancho
-Ventana = pygame.display.set_mode((600, 400))
+ventana = pygame.display.set_mode((600, 400))
 
 # Le ponemos un título a la ventana
 pygame.display.set_caption("Hola Mundo")
@@ -30,7 +30,7 @@ Para poder manejar nuestro programa, necesitaremos un bucle de eventos. Un bucle
 
 Veamoslo con un ejemplo algo más complejo:
 
-```python
+``` {.python .numberLines}
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
@@ -46,7 +46,7 @@ from pygame.locals import *
 pygame.init()
 
 # Creamos una surface (la ventana de juego), asignándole un alto y un ancho
-Ventana = pygame.display.set_mode((600, 400))
+ventana = pygame.display.set_mode((600, 400))
 
 # Le ponemos un título a la ventana
 pygame.display.set_caption("Hola. Pulsa Escape para salir")
@@ -57,7 +57,7 @@ while True:
     for evento in pygame.event.get():
         # Pulsación de la tecla escape
         if evento.type == pygame.KEYDOWN and evento.key == pygame.K_ESCAPE:
-                sys.exit()
+            sys.exit()
 ```
 
 Para empezar, debes notar que estamos importando `pygame.locals` justo después de importar la librería `pygame` (Bueno, también hemos importado `sys`, pero esa librería no debería necesitar explicación).
@@ -66,7 +66,7 @@ Se trata de una serie de constantes que contienen los códigos para poder accede
 
 > Los nombres de las constantes de tecla están siempre formados por el prefijo "K\_" seguido de la tecla a la que se refiere. Por ejemplo K\_a, K\_f, K\_ESCAPE o K\_UP.
 
-En este ejemplo usamos un bucle infinito (normalmente llamado bucle de eventos) que mantiene el programa en ejecución, por lo que nuestra ventana no se cierra.
+En este ejemplo usamos un bucle infinito (normalmente llamado bucle de eventos o *event loop*) que mantiene el programa en ejecución, por lo que nuestra ventana no se cierra.
 
 En cada ciclo del bucle infinito estamos usando pygame.event.get(), que nos retorna los eventos de Pygame que estén ocurriendo.
 
@@ -81,7 +81,12 @@ Como ya te estarás imaginado, prácticamente toda la interacción que hagamos c
 Puedes verlos todos en esta [lista completa de eventos de pygame](http://www.pygame.org/docs/ref/event.html)
 
 > Como veremos más adelante, todos nuestros juegos con **Pygame** van a tener un bucle de eventos con la misma estructura básica. similar a esto:
+
 > Comprobar eventos
+
 > Hacer cosas en base a esos eventos
+
 > Redibujar la pantalla
+
 > Y vuelta a empezar...
+
