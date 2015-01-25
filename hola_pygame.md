@@ -21,8 +21,10 @@ pygame.display.set_caption("Hola Mundo")
 
 Como se puede leer en los comentarios (y cómo deberías comprobar ejecutándolo), este código crea una ventana de 600X400 pixels y le asigna un título.
 
+Tras importar el módulo, el primer método que ejecuta nuestro ejemplo es `pygame.init()`, que iniciará  **Pygame** y nos permitirá usar sus funciones y métodos.
+
 > El módulo `pygame.display` es el encargado de crear y controlar la ventana y la pantalla de juego que contiene (que, a efectos prácticos, es un objeto `surface` (una imagen), como veremos más adelante.
-> Nosotros hemos creado una ventana muy simple, pero puedes ver más posibilidades en la [documentación del módulo `pygame.display`](http://www.pygame.org/docs/ref/display.html)
+> Nosotros hemos creado una ventana muy simple, pero puedes ver más posibilidades en el siguiente capítulo.
 
 Al ejecutar este ejemplo comprobarás que, inmediatamente, la ejecución del programa finaliza y esta ventana se cierra.
 

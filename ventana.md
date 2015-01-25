@@ -1,6 +1,12 @@
-#Ventana
+# Ventana
 
+En el capítulo anterior hemos creado nuestra primera ventana usando la librería `display`.
 
+Normalmente el primer método de esta libreŕia que se usaría es `display.init()`, que sirve para iniciarla. Sin embargo, `display` ya se inicia automáticamente al hacer `pygame.init()`, por lo que no suele ser necesario utilizarlo.
+
+El sugiente paso es crear nuestra ventana que, como hemos visto, se hace con `display.set_mode()`, pasándole como parámetro una *tupla* (se puede usar también una *lista*) con las dimensiones en *pixels* del ancho y el alto (en ese orden), para crear la ventana. Cambiando esos valores obtendremos ventanas de distintas proporciones.
+
+> Un *pixel* es un punto en la pantalla. Más adelante veremos esto con más detalle.
 
 Lo primero que haremos para mejorar nuestro ejemplo será hacer que nuestra ventana se cierre al pulsar el botón X de la propia ventana. Para ello tenemos que responder al evento QUIT de modo parecido a como hicimos con la pulsación de teclas:
 
@@ -37,11 +43,11 @@ while True:
             sys.exit()
 ```
 
+En un juego de verdad, lo más probable es que, para finalizar, llamásemos a una función que pida confirmación al jugador, guarde lo que haya que guardar, etc. Pero, para nuesto pequeño ejemplo, llamar a `sys.exit()` es suficiente.
 
+> **Pygame** no puede tener más de un objeto `display` al mismo tiempo. Si intentas crear una ventana en tu programa con `display.set_mode()` cuando ya existe otra, la nueva reemplazará a la anterior.
 
-Hemos usado `pygame.display.set_mode((600, 400))`, pasándole como parámetro una *tupla* (se puede usar también una *lista*) con las dimensiones del ancho y el alto, para crear la ventana. Cambiando esos valores obtendremos ventanas de distintas proporciones.
-
-Pero nuestra ventana tiene un tamaño fijo y no es posible cambiarlo. Para ello tenemos otro parámetro (la constante de **Pygame** `pygame.RESIZABLE`) que podemos añadir a continuación del tamaño de este modo:
+Pero nuestra ventana tiene un tamaño fijo y no es posible cambiarlo. Para ello tenemos un *flag*, otro parámetro (la constante de **Pygame** `pygame.RESIZABLE`) que podemos añadir a continuación del tamaño de este modo:
 
 ``` {.python .numberLines}
 #!/usr/bin/env python
@@ -83,10 +89,15 @@ Constante | uso
 pygame.FULLSCREEN | en lugar de en una ventana, el juego se ejecutará a pantalla completa.
 pygame.DOUBLEBUF | activa el doble buffer, recomendable para HWSURFACE u OPENGL.
 pygame.HWSURFACE | usa aceleración por hardaware, sólo tienen sentido en FULLSCREEN.
-pygame.OPENGL | activa el uso de OpenGL.
+pygame.OPENGL | activa el soporte de OpenGL.
 pygame.RESIZABLE | como ya jemos visto, permite cambiar el tamaño de ventana.
 pygame.NOFRAME | elimina todos los elementos decorativos de la ventana (bordes, cabecera...).
 
 Para usar más de una de estas constantes se debe usar el signo "|" como separador, por ejemplo:
 
+``` {.python .numberLines}
+# Pantalla completa, con aceleración por hardware y doble buffer
 pygame.display.set_mode((600, 400), pygame.FULLSCREEN | pygame.DOUBLEBUF | pygame.HWSURFACE)
+```
+
+
