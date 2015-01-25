@@ -60,6 +60,9 @@ while True:
             sys.exit()
 ```
 
+> [RECORDATORIO] `while True` creará un bucle que se ejecuta contínuamente hasta que se sale de él con una instrucción 
+`break` o se finaliza el programa por otro medio (como, por ejemplo, con `sys.exit()`).
+
 Para empezar, debes notar que estamos importando `pygame.locals` justo después de importar la librería `pygame` (Bueno, también hemos importado `sys`, pero esa librería no debería necesitar explicación).
 
 Se trata de una serie de constantes que contienen los códigos para poder acceder a las teclas, eventos de ratón, etc, y que usaremos como *alias* para referirnos aellos. En nuestro ejemplo usaremos la tecla Escape.
