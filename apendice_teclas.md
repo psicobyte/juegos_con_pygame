@@ -7,15 +7,15 @@
 | K_PAUSE | pausa |
 | K_ESCAPE | escape |
 | K_SPACE | barra espaciadora |
-| K_EXCLAIM | ! exclaim * |
-| K_QUOTEDBL | " quotedbl * |
-| K_HASH | # hash * |
-| K_DOLLAR | $ dollar * |
-| K_AMPERSAND | & ampersand * |
-| K_QUOTE | quote * |
-| K_LEFTPAREN | ( left parenthesis * |
-| K_RIGHTPAREN | ) right parenthesis * |
-| K_ASTERISK | * asterisk * |
+| K_EXCLAIM | ! exclaim [USA] |
+| K_QUOTEDBL | " quotedbl [USA] |
+| K_HASH | # hash [USA] |
+| K_DOLLAR | $ dollar [USA] |
+| K_AMPERSAND | & ampersand [USA] |
+| K_QUOTE | quote [USA] |
+| K_LEFTPAREN | ( left parenthesis [USA] |
+| K_RIGHTPAREN | ) right parenthesis [USA] |
+| K_ASTERISK | * asterisk [USA] |
 | K_PLUS | + |
 | K_COMMA | , |
 | K_MINUS | - |
@@ -31,19 +31,19 @@
 | K_7 | 7 |
 | K_8 | 8 |
 | K_9 | 9 |
-| K_COLON | : colon * |
-| K_SEMICOLON | ; semicolon * |
-| K_LESS | < * |
-| K_EQUALS | = equals sign * |
-| K_GREATER | > greater-than sign * |
-| K_QUESTION | ? question mark * |
-| K_AT | @ at * |
-| K_LEFTBRACKET | \[ left bracket * |
-| K_BACKSLASH | \ backslash * |
-| K_RIGHTBRACKET | ] right bracket * |
-| K_CARET | ^ caret * |
-| K_UNDERSCORE | _ underscore * |
-| K_BACKQUOTE | ` grave * |
+| K_COLON | : colon [USA] |
+| K_SEMICOLON | ; semicolon [USA] |
+| K_LESS | < [USA] |
+| K_EQUALS | = equals sign [USA] |
+| K_GREATER | > greater-than sign [USA] |
+| K_QUESTION | ? question mark [USA] |
+| K_AT | @ at [USA] |
+| K_LEFTBRACKET | \[ left bracket [USA] |
+| K_BACKSLASH | \ backslash [USA] |
+| K_RIGHTBRACKET | ] right bracket [USA] |
+| K_CARET | ^ caret [USA] |
+| K_UNDERSCORE | _ underscore [USA] |
+| K_BACKQUOTE | ` grave [USA] |
 | K_a | a |
 | K_b | b |
 | K_c | c |
@@ -134,9 +134,7 @@
 | K_POWER | power [APPLE] |
 | K_EURO | euro ¿? |
 
-Las teclas marcadas con un asterisco (*) no aparecen en la distirbución de teclas en español. Las teclas marcadas como [APPLE] son propias de este sistema.
-
-Estas constantes están concebidas para la distribución de teclado de Estados Unidos. No hay, por tanto, constantes definidas para referise a teclas carácterísticas del teclado español.
+Las teclas marcadas con [USA] pertenecen a la distribución de teclas estadounidense, y no aparecen en el teclado en español. Las teclas marcadas como [APPLE] son propias de los teclados de Apple. Dado que estas constantes están concebidas para la distribución de teclado de Estados Unidos no hay constantes definidas para referise a teclas carácterísticas del teclado español.
 
 Para acceder a otras teclas se puede usar directamente el valor numérico de la tecla, como por ejemplo:
 
