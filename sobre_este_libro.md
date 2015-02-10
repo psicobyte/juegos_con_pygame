@@ -2,6 +2,10 @@
 
 Se supone que se conoce Python
 
+se recomienda linux
+
+python 2
+
 Convenciones
 
 Cuando se mencione un comando o un elemento del lenguaje se presentará de este modo: `import pygame`.
