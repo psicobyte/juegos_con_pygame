@@ -47,7 +47,7 @@ Las coordenadas se miden en pixels desde la esquina superior izquierda de la pan
 
 La primera coordenada de la tupla es el eje X (horizontal) y la segunda es el eje Y (vertical), como se puede ver en este esquema:
 
-![Pixels y coordenadas](img/pixel.png)
+![Pixels y coordenadas](img/coordenadas.png)
 
 Respecto al eje Z (es decir, la profundidad: qué imágenes se dibujarán encima de cuáles), las imágenes se muestran en el orden en el que se ubican con `blit`, de modo que las últimas se mostrarán *sobre* las anteriores.
 
