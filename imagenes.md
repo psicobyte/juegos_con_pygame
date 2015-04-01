@@ -2,7 +2,19 @@
 
 El principal elemento en un juego son las imágenes. Usamos imágenes para los fondos y decorados, para los objetos estáticos o dinámicos, para los personajes o elementos de juego, para el interfaz...
 
-Pygame usa para todo ello el objeto `surface`, que consiste básicamente en un formato de imagen interno. Para crear tus imágenes puedes usar el programa gráfico que quieras, porque Pygame permite importar los formatos de imagen más usuales. Concretamente, los formatos de imagen soportados por pygame son *.bmp, *.gif, *.jpg, *.lbm, *.pbm, *.pcx, *.pgm, *.png, *.ppm, *.tga, *.tif y *.xpm.
+Para Pygame, una imagen no es más que un rectángulo formado por puntos de color llamados "pixels".
+
+Por ejemplo, aquí debajo puedes ver la fotografía de un gato y, a su derecha, el detalle aampliado de una pequeña zona de la imagen (marcada en el original con un cuadrado):
+
+Aunque Pygame usa este sistema, en realidad esta no es la única forma posible de representar imágenes, pero sí que es la más utilizada. Es así, por ejemplo, en los típicos formatos de imagen "\*.gif", "\*.png" o "\*.jpg". Este tipo de formato de imagen es lo que se conoce como un "mapa de bits" o "bitmap").
+
+![img/pixel.png]
+
+
+
+
+
+Pygame usa para manejar imágenes el objeto `surface`, que consiste básicamente en un formato de imagen interno. Para crear tus imágenes puedes usar el programa gráfico que quieras, porque Pygame permite importar los formatos de mapa de bits más usuales. Concretamente, los formatos de imagen soportados por pygame son *.bmp, *.gif, *.jpg, *.lbm, *.pbm, *.pcx, *.pgm, *.png, *.ppm, *.tga, *.tif y *.xpm.
 
 Para cargar imágenes tenemos pygame.image.load(), que importa un archivo de imagen a Pygame de este modo:
 
@@ -29,10 +41,15 @@ Para posicionar un gráfico en pantalla de la Ventana (que es una `surface`), us
 Ventana.blit(Fondo, (0, 0))
 ```
 
-> Unas notas acerca de las coordenadas:
-> Las coordenadas se miden en pixels desde la esquina superior izquierda de la pantalla (o de la imagen sobre las que las midamos), e indican dónde se ubicará la esquina superior izquierda de la imagen.
-> La primera coordenada de la tupla es el eje X (horizontal) y la segunda es el eje Y (vertical).
-> Respecto al eje Z (es decir, la profundidad: qué imágenes se dibujarán encima de cuáles), las imágenes se muestran en el orden en el que se ubican con blit, de modo que las últimas se mostrarán *sobre* las anteriores.
+Para referenciar a un pixel concreto (por ejemplo, indicar la posición donde se hace un `blit`), Pygame usa sus coordenadas.
+
+Las coordenadas se miden en pixels desde la esquina superior izquierda de la pantalla (o de la imagen sobre las que las midamos), e indican dónde se ubicará la esquina superior izquierda de la imagen.
+
+La primera coordenada de la tupla es el eje X (horizontal) y la segunda es el eje Y (vertical), como se puede ver en este esquema:
+
+![img/pixel.png]
+
+Respecto al eje Z (es decir, la profundidad: qué imágenes se dibujarán encima de cuáles), las imágenes se muestran en el orden en el que se ubican con `blit`, de modo que las últimas se mostrarán *sobre* las anteriores.
 
 Sólo posicionar las imágenes **no las muestra**. Hace falta indicarle a Pygame que debe redibujarlas, para lo que tenemos la instrucción `pygame.display.flip()`, que actualiza la ventana completa y se usa de este modo:
 
