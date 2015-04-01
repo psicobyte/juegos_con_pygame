@@ -6,23 +6,19 @@ Para Pygame, una imagen no es más que un rectángulo formado por puntos de colo
 
 Por ejemplo, aquí debajo puedes ver la fotografía de un gato y, a su derecha, el detalle aampliado de una pequeña zona de la imagen (marcada en el original con un cuadrado):
 
-Aunque Pygame usa este sistema, en realidad esta no es la única forma posible de representar imágenes, pero sí que es la más utilizada. Es así, por ejemplo, en los típicos formatos de imagen "\*.gif", "\*.png" o "\*.jpg". Este tipo de formato de imagen es lo que se conoce como un "mapa de bits" o "bitmap").
+![Ejemplo de bitmap](img/pixels.png)
 
-![Ejemplo de bitmap](img/pixel.png)
+Aunque Pygame usa este sistema, en realidad esta no es la única forma posible de representar imágenes, pero sí que es la más utilizada. Es así, por ejemplo, en los típicos formatos de imagen GIF, PNG o JPG. Este tipo de formato de imagen es lo que se conoce como un "mapa de bits" o "bitmap").
 
+Pygame usa para manejar imágenes el objeto `surface`, que consiste básicamente en un formato de imagen interno. Para crear tus imágenes puedes usar el programa gráfico que quieras, porque Pygame permite importar los formatos de mapa de bits más usuales. Concretamente, los formatos de imagen soportados por pygame son BMP, GIF, JPG, LBM, PBM, PCX, PGM, PNG, PPM, TGA, TIF y XPM.
 
-
-
-
-Pygame usa para manejar imágenes el objeto `surface`, que consiste básicamente en un formato de imagen interno. Para crear tus imágenes puedes usar el programa gráfico que quieras, porque Pygame permite importar los formatos de mapa de bits más usuales. Concretamente, los formatos de imagen soportados por pygame son *.bmp, *.gif, *.jpg, *.lbm, *.pbm, *.pcx, *.pgm, *.png, *.ppm, *.tga, *.tif y *.xpm.
-
-Para cargar imágenes tenemos pygame.image.load(), que importa un archivo de imagen a Pygame de este modo:
+Para cargar nuestras imágenes tenemos pygame.image.load(), que importa un archivo de imagen a Pygame de este modo:
 
 ```
 Imagen= pygame.image.load("ruta/al/archivo/de/imagen.jpg")
 ```
 
-Esto crea un objeto `surface` que podemos usar en nuestro juego.
+Esto crea un objeto `surface` que podremos usar en nuestro juego.
 
 El efecto contrario (guardar una `surface` a un archivo) se hace mediante pygame.image.save(), que se usa del sigueinte modo:
 
@@ -30,7 +26,7 @@ El efecto contrario (guardar una `surface` a un archivo) se hace mediante pygame
 pygame.image.load(Imagen,"ruta/al/archivo/de/imagen.jpg")
 ```
 
-> El método "save" sólo soporta los formatos *.bmp, *.tga, *.png y *.jpeg.
+> El método "save" sólo soporta los formatos BMP, TGA, PNG y JPG.
 
 Para posicionar un gráfico en pantalla de la Ventana (que es una `surface`), usaremos el método `blit` pasándole como parámetros la imagen (otra `surface`) que queremos cargar y una tupla con sus coordenadas.
 
@@ -67,7 +63,7 @@ También usaremos una pequeña imagen con el logo de la [Oficina de Softwre libr
 
 ![imagen.png](../img/imagen.png)
 
-> Nota que estamos usando una imagen JPG y otra PNG indistintamente, Pygame se ocupa de ello por nosotros
+> Nota que estamos usando una imagen JPG y otra PNG indistintamente, Pygame se ocupa de ello por nosotros.
 
 Veamos el ejemplo ahora:
 
