@@ -8,7 +8,7 @@ Por ejemplo, aquí debajo puedes ver la fotografía de un gato y, a su derecha, 
 
 Aunque Pygame usa este sistema, en realidad esta no es la única forma posible de representar imágenes, pero sí que es la más utilizada. Es así, por ejemplo, en los típicos formatos de imagen "\*.gif", "\*.png" o "\*.jpg". Este tipo de formato de imagen es lo que se conoce como un "mapa de bits" o "bitmap").
 
-![img/pixel.png]
+![Ejemplo de bitmap](img/pixel.png)
 
 
 
@@ -47,7 +47,7 @@ Las coordenadas se miden en pixels desde la esquina superior izquierda de la pan
 
 La primera coordenada de la tupla es el eje X (horizontal) y la segunda es el eje Y (vertical), como se puede ver en este esquema:
 
-![img/pixel.png]
+![Pixels y coordenadas](img/pixel.png)
 
 Respecto al eje Z (es decir, la profundidad: qué imágenes se dibujarán encima de cuáles), las imágenes se muestran en el orden en el que se ubican con `blit`, de modo que las últimas se mostrarán *sobre* las anteriores.
 
