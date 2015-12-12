@@ -24,6 +24,6 @@ Ninguna de estas cosas es simple o fácil por sí sola, mucho menos todas en con
 
 **Pygame** no puede hacer milagros. No te convertirá en dibujante ni hará que tus *sprites* sean más atractivos o se muevan mejor. No te enseñará a componer música o a programar. No hará de ti un narrador, un guionista o un director de cine.
 
-Lo que **Pygame** sí puede hacer por ti es facilitarte el trabajo simplificando el trabajo de programación, haciendo que tareas complejas y tediosas que suelen necesitar todos los juegos sean mucho más fáciles.
+Lo que **Pygame** sí puede hacer por ti es facilitarte la tarea simplificando el trabajo de programación, haciendo que tareas complejas y tediosas que suelen necesitar todos los juegos sean mucho más fáciles.
 
 El resto es cosa tuya.

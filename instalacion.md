@@ -1,6 +1,6 @@
 ##Instalación
 
-**Pygame** está desarrollado sobre **Python 2.7.X**, que es el que se usara en los ejemplos de este libro, aunque también hay una versión (ligeramente más limitada en algunos aspectos) para **Python 3.X**.
+**Pygame** está desarrollado sobre **Python 2.7.X**, que es el que se usará en los ejemplos de este libro, aunque también hay una versión (ligeramente más limitada en algunos aspectos) para **Python 3.X**.
 
 Además de **Python**, naturalmente, hace falta instalar el propio **Pygame**. En general, **Pygame** se instala como cualquier otro módulo de **Python**.
 

@@ -1,6 +1,6 @@
 ##¡Hola Pygame!
 
-Vamos a dar nuestros primeros pasos en la programación de videojuegos con Pygame usando un clásico "Hola Mundo".
+Vamos a dar nuestros primeros pasos en la programación de videojuegos con **Pygame** usando un clásico "Hola Mundo".
 
 ``` {.python .numberLines}
 #!/usr/bin/env python
@@ -67,21 +67,21 @@ while True:
 
 Para empezar, debes notar que estamos importando `pygame.locals` justo después de importar la librería `pygame` (Bueno, también hemos importado `sys`, pero esa librería no debería necesitar explicación).
 
-Se trata de una serie de constantes que contienen los códigos para poder acceder a las teclas, eventos de ratón, etc, y que usaremos como *alias* para referirnos aellos. En nuestro ejemplo usaremos la tecla Escape.
+Se trata de una serie de constantes que contienen los códigos para poder acceder a las teclas, eventos de ratón, etc, y que usaremos como *alias* para referirnos a ellos. En nuestro ejemplo usaremos la tecla Escape.
 
-> Los nombres de las constantes de tecla están siempre formados por el prefijo "K\_" seguido de la tecla a la que se refiere. Por ejemplo K\_a, K\_f, K\_ESCAPE o K\_UP.
+> Los nombres de las constantes de tecla están siempre formados por el prefijo "K\_" seguido de la tecla a la que se refiere. Por ejemplo `K\_a`, `K\_f`, `K\_ESCAPE` o `K\_UP`.
 
 En este ejemplo usamos un bucle infinito (normalmente llamado bucle de eventos o *event loop*) que mantiene el programa en ejecución, por lo que nuestra ventana no se cierra.
 
-En cada ciclo del bucle infinito estamos usando pygame.event.get(), que nos retorna los eventos de Pygame que estén ocurriendo.
+En cada ciclo del bucle infinito estamos usando pygame.event.get(), que nos retorna los eventos de **Pygame** que estén ocurriendo.
 
-Si el tipo de evento es una pulsación de tecla (al que accedemos con la constante de Pygame "KEYDOWN") y esa tecla es Escape (K_ESCAPE), salimos del programa.
+Si el tipo de evento es una pulsación de tecla (al que accedemos con la constante de **Pygame** `KEYDOWN`) y esa tecla es Escape (`K_ESCAPE`), salimos del programa.
 
 Por otro lado notarás que, si tratas de cerrarla pulsando el botón de cerrar de la propia ventana, esto no funciona.
 
-Como práctica, puedes intentar hacer que funcione teniendo en cuenta que la constante de Pygame correspondiente a pulsar ese botón es "QUIT".
+Como práctica, puedes intentar hacer que funcione teniendo en cuenta que la constante de **Pygame** correspondiente a pulsar ese botón es `QUIT`.
 
-Como ya te estarás imaginado, prácticamente toda la interacción que hagamos con nuestro juego en Pygame se hará por medio de eventos.
+Como ya te estarás imaginado, prácticamente toda la interacción que hagamos con nuestro juego en **Pygame** se hará por medio de eventos.
 
 Puedes verlos todos en esta [lista completa de eventos de pygame](http://www.pygame.org/docs/ref/event.html)
 

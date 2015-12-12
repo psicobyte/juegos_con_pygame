@@ -39,7 +39,7 @@ Coordenadas = (coordX, coordY)
 while True:
 
     Ventana.blit(Fondo, (0, 0))
-    Ventana.blit(Imagen, Coordenadas)    
+    Ventana.blit(Imagen, Coordenadas)
     pygame.display.flip()
 
     # Manejador de eventos
@@ -60,15 +60,15 @@ while True:
     Coordenadas = (coordX, coordY)
 ```
 
-Vale. Nuestro código (que es casi el mismo del tema anterior)está creciendo y empieza a ser lo suficientemente complejo para ir necesitando que estructuremos el código, con sus funciones y sus clases, pero para estos ejemplos nos hace el apaño.
+Vale. Nuestro programa (que es casi el mismo del tema anterior) está creciendo y empieza a ser lo suficientemente complejo para ir necesitando que estructuremos el código, con sus funciones y sus clases, pero para estos ejemplos nos hace el apaño.
 
 Las únicas diferencias sobre los ejemplos del tema anterior son:
 
-* Hemos definido las coordenadas de Imagen en un par de variables (coordX y coordY), para poder modificarlas cómodamente al recibir la pulsación de la tecla correspondiente
-* Hemos añadido el control para las interrupciones de teclado de las teclas de flecha
-* Ahora rdibujamos Fondo e Imagen en cada ciclo de nuestro bucle (prueba a sacar ese " Ventana.blit(Fondo, (0, 0))" y ponerlo *antes* de iniciar el bucle)
+* Hemos definido las coordenadas de `Imagen` en un par de variables (`coordX` y `coordY`), para poder modificarlas cómodamente al recibir la pulsación de la tecla correspondiente.
+* Hemos añadido el control para las interrupciones de teclado de las teclas de flecha.
+* Ahora redibujamos `Fondo` e `Imagen` en cada ciclo de nuestro bucle (prueba a sacar ese `Ventana.blit(Fondo, (0, 0))` y ponerlo *antes* de iniciar el bucle).
 
-Un detalle importante es que, como el evento KEYDOWN ocurre al *pulsar* una tecla, Imagen se mueve dando un "paso" cada vez que se pulsa. Si queremos que el movimiento sea contínuo, se puede hacer con un sistema de flags parecido al siguiente:
+Un detalle importante es que, como el evento `KEYDOWN` ocurre al *pulsar* una tecla, `Imagen` se mueve dando un "paso" cada vez que se pulsa. Si queremos que el movimiento sea contínuo, se puede hacer con un sistema de flags parecido al siguiente:
 
 ```
 #!/usr/bin/env python
@@ -140,15 +140,15 @@ Dado que incrementamos las coordenadas en una cantidad fija a cada ciclo del buc
 
 ¿Hay una forma de asegurarnos que la velocidad es constante indpendientemente de las circunstancias?
 
-Bueno, si el procesador donde se ejecuta es muy lento o la máquia está muy sobrecargada va a ser dificil hacer que vaya más rápido, pero sí podemos limitar la velocidad para que no exceda de cierto nivel.
+Bueno, si el procesador donde se ejecuta es muy lento o la máquina está muy sobrecargada, va a ser dificil hacer que vaya más rápido, pero sí podemos limitar la velocidad para que no exceda de cierto nivel.
 
-Para esto (y para más cosas) tenemos la clase de Pygame "Clock", que se llama del siguiente modo:
+Para esto (y para más cosas) tenemos la clase de **Pygame** `Clock`, que se llama del siguiente modo:
 
 ```
 Reloj= pygame.time.Clock() 
 ```
 
-y nos retorna un reloj que podemos usar para muchas cosas, entre las que está establecer un "tic", un tiempo en milisegundos que limita la velocidad a la que se procesa nuestro bucle principal. Por ejemplo:
+y nos retorna un reloj que podemos usar para muchas cosas, entre las que está establecer un *tic*, un tiempo en milisegundos que limita la velocidad a la que se procesa nuestro bucle principal. Por ejemplo:
 
 ```
 #!/usr/bin/env python
@@ -190,7 +190,7 @@ incrementoY = 0
 while True:
 
     Ventana.blit(Fondo, (0, 0))
-    Ventana.blit(Imagen, Coordenadas)    
+    Ventana.blit(Imagen, Coordenadas)
     pygame.display.flip()
 
    # Manejador de eventos
@@ -220,7 +220,7 @@ while True:
     Reloj.tick(30)
 ```
 
-Fíjate que, en este ejemplo, creamos un reloj al principo del programa y le ponemos el tic de 30 milisegundos dentro del bucle (al final)
+Fíjate que, en este ejemplo, creamos un reloj al principo del programa y le ponemos el tic de 30 milisegundos dentro del bucle (al final).
 
 > Puedes cambiar el tiempo del tic y experimentar con los resultados.
 
