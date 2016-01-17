@@ -22,24 +22,24 @@ from pygame.locals import *
 pygame.init()
 
 # Creamos una surface (la ventana de juego), asignándole un alto y un ancho
-Ventana = pygame.display.set_mode((600, 400))
+ventana = pygame.display.set_mode((600, 400))
 
 # Le ponemos un título a la ventana
 pygame.display.set_caption("Moviendo Imágenes")
 
 # Cargamos las imágenes
-Fondo = pygame.image.load("fondo.jpg")
-Imagen = pygame.image.load("imagen.png")
+fondo = pygame.image.load("fondo.jpg")
+imagen = pygame.image.load("imagen.png")
 
 coordX = 300
 coordY = 200
-Coordenadas = (coordX, coordY)
+coordenadas = (coordX, coordY)
 
 # Bucle infinito para mantener el programa en ejecución
 while True:
 
-    Ventana.blit(Fondo, (0, 0))
-    Ventana.blit(Imagen, Coordenadas)
+    ventana.blit(fondo, (0, 0))
+    ventana.blit(imagen, Coordenadas)
     pygame.display.flip()
 
     # Manejador de eventos
@@ -57,18 +57,18 @@ while True:
                 coordX = coordX - 5
             elif evento.key == pygame.K_UP:
                 coordY = coordY - 5
-    Coordenadas = (coordX, coordY)
+    coordenadas = (coordX, coordY)
 ```
 
 Vale. Nuestro programa (que es casi el mismo del tema anterior) está creciendo y empieza a ser lo suficientemente complejo para ir necesitando que estructuremos el código, con sus funciones y sus clases, pero para estos ejemplos nos hace el apaño.
 
 Las únicas diferencias sobre los ejemplos del tema anterior son:
 
-* Hemos definido las coordenadas de `Imagen` en un par de variables (`coordX` y `coordY`), para poder modificarlas cómodamente al recibir la pulsación de la tecla correspondiente.
+* Hemos definido las coordenadas de "imagen" en un par de variables ("coordX" y "coordY"), para poder modificarlas cómodamente al recibir la pulsación de la tecla correspondiente.
 * Hemos añadido el control para las interrupciones de teclado de las teclas de flecha.
-* Ahora redibujamos `Fondo` e `Imagen` en cada ciclo de nuestro bucle (prueba a sacar ese `Ventana.blit(Fondo, (0, 0))` y ponerlo *antes* de iniciar el bucle).
+* Ahora redibujamos "fondo" e "imagen" en cada ciclo de nuestro bucle (prueba a sacar ese `ventana.blit(Fondo, (0, 0))` y ponerlo *antes* de iniciar el bucle).
 
-Un detalle importante es que, como el evento `KEYDOWN` ocurre al *pulsar* una tecla, `Imagen` se mueve dando un "paso" cada vez que se pulsa. Si queremos que el movimiento sea contínuo, se puede hacer con un sistema de flags parecido al siguiente:
+Un detalle importante es que, como el evento `KEYDOWN` ocurre al *pulsar* una tecla, "imagen" se mueve dando un "paso" cada vez que se pulsa. Si queremos que el movimiento sea contínuo, se puede hacer con un sistema de flags parecido al siguiente:
 
 ```
 #!/usr/bin/env python
@@ -86,18 +86,18 @@ from pygame.locals import *
 pygame.init()
 
 # Creamos una surface (la ventana de juego), asignándole un alto y un ancho
-Ventana = pygame.display.set_mode((600, 400))
+ventana = pygame.display.set_mode((600, 400))
 
 # Le ponemos un título a la ventana
 pygame.display.set_caption("Moviendo Imágenes")
 
 # Cargamos las imágenes
-Fondo = pygame.image.load("fondo.jpg")
-Imagen = pygame.image.load("imagen.png")
+fondo = pygame.image.load("fondo.jpg")
+imagen = pygame.image.load("imagen.png")
 
 coordX = 300
 coordY = 200
-Coordenadas = (coordX, coordY)
+coordenadas = (coordX, coordY)
 
 incrementoX = 0
 incrementoY = 0
@@ -105,8 +105,8 @@ incrementoY = 0
 # Bucle infinito para mantener el programa en ejecución
 while True:
 
-    Ventana.blit(Fondo, (0, 0))
-    Ventana.blit(Imagen, Coordenadas)    
+    ventana.blit(fondo, (0, 0))
+    ventana.blit(imagen, coordenadas)
     pygame.display.flip()
 
    # Manejador de eventos
@@ -130,7 +130,7 @@ while True:
     coordX = coordX + incrementoX
     coordY = coordY + incrementoY
 
-    Coordenadas = (coordX, coordY)
+    coordenadas = (coordX, coordY)
 ```
 Bueno, quizás no es mu elegante, pero es sencillo y deberías pararte un momento y verlo detenidamente para asegurarte de que lo entiendes.
 
@@ -145,7 +145,7 @@ Bueno, si el procesador donde se ejecuta es muy lento o la máquina está muy so
 Para esto (y para más cosas) tenemos la clase de **Pygame** `Clock`, que se llama del siguiente modo:
 
 ```
-Reloj= pygame.time.Clock() 
+reloj= pygame.time.Clock() 
 ```
 
 y nos retorna un reloj que podemos usar para muchas cosas, entre las que está establecer un *tic*, un tiempo en milisegundos que limita la velocidad a la que se procesa nuestro bucle principal. Por ejemplo:
@@ -160,7 +160,7 @@ import pygame
 import sys
 
 # Creamos un reloj
-Reloj= pygame.time.Clock()
+reloj= pygame.time.Clock()
 
 
 # Importamos constantes locales de pygame
@@ -170,14 +170,14 @@ from pygame.locals import *
 pygame.init()
 
 # Creamos una surface (la ventana de juego), asignándole un alto y un ancho
-Ventana = pygame.display.set_mode((600, 400))
+ventana = pygame.display.set_mode((600, 400))
 
 # Le ponemos un título a la ventana
 pygame.display.set_caption("Moviendo Imágenes")
 
 # Cargamos las imágenes
-Fondo = pygame.image.load("fondo.jpg")
-Imagen = pygame.image.load("imagen.png")
+fondo = pygame.image.load("fondo.jpg")
+imagen = pygame.image.load("imagen.png")
 
 coordX = 300
 coordY = 200
@@ -189,8 +189,8 @@ incrementoY = 0
 # Bucle infinito para mantener el programa en ejecución
 while True:
 
-    Ventana.blit(Fondo, (0, 0))
-    Ventana.blit(Imagen, Coordenadas)
+    ventana.blit(fondo, (0, 0))
+    ventana.blit(imagen, Coordenadas)
     pygame.display.flip()
 
    # Manejador de eventos
@@ -214,17 +214,17 @@ while True:
     coordX = coordX + incrementoX
     coordY = coordY + incrementoY
 
-    Coordenadas = (coordX, coordY)
+    coordenadas = (coordX, coordY)
 
     # Asignamos un "tic" de 30 milisegundos
-    Reloj.tick(30)
+    reloj.tick(30)
 ```
 
 Fíjate que, en este ejemplo, creamos un reloj al principo del programa y le ponemos el tic de 30 milisegundos dentro del bucle (al final).
 
 > Puedes cambiar el tiempo del tic y experimentar con los resultados.
 
-Podemos usar este reloj para muchas otras cosas, como contar el tiempo (lógicamente) sincronizar eventos, hacer animaciones...
+Podemos usar este reloj para muchas otras cosas, como contar el tiempo (lógicamente), sincronizar eventos, hacer animaciones...
 
 > Puedes ver más detalles en la [documentación oficial del módulo "time" de pygame](http://www.pygame.org/docs/ref/time.html)
 

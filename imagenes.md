@@ -12,29 +12,29 @@ Aunque **Pygame** usa este sistema, en realidad esta no es la única forma posib
 
 **Pygame** usa para manejar imágenes el objeto `surface`, que consiste básicamente en un formato de imagen interno. Para crear tus imágenes puedes usar el programa gráfico que quieras, porque **Pygame** permite importar los formatos de mapa de bits más usuales. Concretamente, los formatos de imagen soportados por pygame son BMP, GIF, JPG, LBM, PBM, PCX, PGM, PNG, PPM, TGA, TIF y XPM.
 
-Para cargar nuestras imágenes tenemos pygame.image.load(), que importa un archivo de imagen a **Pygame** de este modo:
+Para cargar nuestras imágenes tenemos `pygame.image.load()`, que importa un archivo de imagen a **Pygame** de este modo:
 
 ```
-Imagen= pygame.image.load("ruta/al/archivo/de/imagen.jpg")
+imagen= pygame.image.load("ruta/al/archivo/de/imagen.jpg")
 ```
 
 Esto crea un objeto `surface` que podremos usar en nuestro juego.
 
-El efecto contrario (guardar una `surface` a un archivo) se hace mediante pygame.image.save(), que se usa del sigueinte modo:
+El efecto contrario (guardar una `surface` a un archivo) se hace mediante `pygame.image.save()`, que se usa del siguiente modo:
 
 ```
-pygame.image.load(Imagen,"ruta/al/archivo/de/imagen.jpg")
+pygame.image.load(imagen,"ruta/al/archivo/de/imagen.jpg")
 ```
 
 > El método `save` sólo soporta los formatos BMP, TGA, PNG y JPG.
 
 Para posicionar un gráfico en pantalla de la Ventana (que es en sí misma una `surface`), usaremos el método `blit` pasándole como parámetros la imagen (otra `surface`) que queremos cargar y una tupla con sus coordenadas.
 
-> Lo que hace `blit`, en realidad, es pegar unas imágenes en otras. En nuestro caso, sobre Ventana. De este modo, lo que estamos haciendo es crear una sola imagen para, posteriormente, dibujar todo de una sola vez.
+> Lo que hace `blit`, en realidad, es pegar unas imágenes en otras. En nuestro caso, sobre "ventana". De este modo, lo que estamos haciendo es crear una sola imagen para, posteriormente, dibujar todo de una sola vez.
 > Esto acelera el redibujado de gráficos y mejora el rendimiento, además de aprovechar algunas capacidades de aceleración por hardware. [Ver más acerca de la técnica del blitting](http://es.wikipedia.org/wiki/Bit_blit)
 
 ```
-Ventana.blit(Fondo, (0, 0))
+ventana.blit(Fondo, (0, 0))
 ```
 
 Para referenciar a un pixel concreto (por ejemplo, indicar la posición donde se hace un `blit`), **Pygame** usa sus coordenadas.
@@ -89,11 +89,11 @@ Ventana = pygame.display.set_mode((600, 400))
 pygame.display.set_caption("Poniendo Imágenes")
 
 # Cargamos las imágenes
-Fondo = pygame.image.load("fondo.jpg")
-Imagen = pygame.image.load("imagen.png")
+fondo = pygame.image.load("fondo.jpg")
+imagen = pygame.image.load("imagen.png")
 # posiciona las imágenes en Ventana
-Ventana.blit(Fondo, (0, 0))
-Ventana.blit(Imagen, (300, 200))
+ventana.blit(fondo, (0, 0))
+ventana.blit(imagen, (300, 200))
 # refresca los gráficos
 pygame.display.flip()
 
@@ -114,8 +114,8 @@ Hacerlo así nos simplificará el trabajo, aunque **Pygame** nos permite asignar
 La forma más usual de hacer esto es tomar el color de la esquina superior derecha de la imagen (las coordenadas 0,0) con el `método get_at()` y usar ese color como transparente, de un modo parecido a esto:
 
 ```
-transparente = MiImagen.get_at((0, 0))
-MiImagen.set_colorkey(transparente)
+transparente = mi_imagen.get_at((0, 0))
+mi_imagen.set_colorkey(transparente)
 ```
 
 Para que esto funcione es necesario que la imagen tenga un color de fondo uniforme y que, además, ese color no se use en el resto de la imagen (porque esa parte también se vería transparente).
@@ -127,13 +127,13 @@ Puedes usar esta imagen en formto GIF para practicar:
 Un método interesante es `subsurface()`, que permite extraer una imagen (objeto surface) como parte de otra. Es decir, crea una imagen a partir de un "recorte" de otra mayor. Se usa de este modo:
 
 ```
-ImagenTrozo = ImagenCompleta.subsurface(Rect)
+imagen_trozo = imagen_completa.subsurface(rectangulo)
 ```
 
-donde `Rect` es un objeto `rectangle` del que más adelante veremos un poco más pero que, para lo que nos interesa ahora, es una tupla con las cuatro coordenadas del rectángulo que recortaremos para crear nuestra nueva imagen. por ejemplo:
+donde "rectangulo" es un objeto `rectangle` del que más adelante veremos un poco más pero que, para lo que nos interesa ahora, es una tupla con las coordenadas del rectángulo que recortaremos para crear nuestra nueva imagen. por ejemplo:
 
 ```
-Rect = (0,0,29,81)
+rectangulo = (0,0,29,81)
 ```
 Esto nos va a ser muy útil para almacenar varias imágenes relacionadas en un sólo archivo, en particular cuando veamos cómo animar sprites.
 
