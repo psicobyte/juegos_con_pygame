@@ -1,16 +1,16 @@
-##Imágenes
+## Imágenes
 
 El principal elemento en un juego son las imágenes. Usamos imágenes para los fondos y decorados, para los objetos estáticos o dinámicos, para los personajes o elementos de juego, para el interfaz...
 
 Para **Pygame**, una imagen no es más que un rectángulo formado por puntos de color llamados "*pixels*".
 
-Por ejemplo, aquí debajo puedes ver la fotografía de un gato y, a su derecha, el detalle aampliado de una pequeña zona de la imagen (marcada en el original con un cuadrado):
+Por ejemplo, aquí debajo puedes ver la fotografía de un gato y, a su derecha, el detalle ampliado de una pequeña zona de la imagen (marcada en el original con un cuadrado):
 
 ![Ejemplo de bitmap](img/pixels.png)
 
-Aunque **Pygame** usa este sistema, en realidad esta no es la única forma posible de representar imágenes, pero sí que es la más utilizada. Es así, por ejemplo, en los típicos formatos de imagen GIF, PNG o JPG. Este tipo de formato de imagen es lo que se conoce como un "mapa de bits" o "bitmap").
+Aunque **Pygame** usa este sistema, en realidad esta no es la única forma posible de representar imágenes, pero sí que es la más utilizada. Es así, por ejemplo, en los típicos formatos de imagen GIF, PNG o JPG. Este tipo de formato de imagen es lo que se conoce como un "mapa de bits" o "bitmap".
 
-**Pygame** usa para manejar imágenes el objeto `surface`, que consiste básicamente en un formato de imagen interno. Para crear tus imágenes puedes usar el programa gráfico que quieras, porque **Pygame** permite importar los formatos de mapa de bits más usuales. Concretamente, los formatos de imagen soportados por pygame son BMP, GIF, JPG, LBM, PBM, PCX, PGM, PNG, PPM, TGA, TIF y XPM.
+**Pygame** usa para manejar imágenes el objeto `surface`, que consiste básicamente en un formato de imagen (de _bitmap_, como hemos visto) interno. Para crear tus imágenes puedes usar el programa gráfico que quieras, porque **Pygame** permite importar los formatos de mapa de bits más usuales. Concretamente, los formatos de imagen soportados por **Pygame** son BMP, GIF, JPG, LBM, PBM, PCX, PGM, PNG, PPM, TGA, TIF y XPM.
 
 Para cargar nuestras imágenes tenemos `pygame.image.load()`, que importa un archivo de imagen a **Pygame** de este modo:
 
@@ -57,9 +57,9 @@ Vamos a ver cómo funciona todo esto junto:
 
 Para los siguientes ejemplos vamos a usar una imagen de fondo que es obra de [Lil-Mz](http://www.deviantart.com/morelikethis/125969509) y se distribuye con una licencia Creative Commons BySA que permite su reutilización.
 
-![fondo.jpg](../img/fondo.jpg)
+![fondo.jpg](recursos/fondo.jpg)
 
-También usaremos una pequeña imagen con el logo de la [Oficina de Softwre libre de la Universidad de Granada](http://osl.ugr.es) 
+También usaremos una pequeña imagen con el logo de la [Oficina de Softwre libre de la Universidad de Granada](http://osl.ugr.es)
 
 ![imagen.png](../img/imagen.png)
 
@@ -99,7 +99,7 @@ pygame.display.flip()
 
 # Bucle infinito para mantener el programa en ejecución
 while True:
-    
+
     # Manejador de eventos
     for evento in pygame.event.get():
         # Pulsación de la tecla escape
@@ -120,7 +120,7 @@ mi_imagen.set_colorkey(transparente)
 
 Para que esto funcione es necesario que la imagen tenga un color de fondo uniforme y que, además, ese color no se use en el resto de la imagen (porque esa parte también se vería transparente).
 
-Puedes usar esta imagen en formto GIF para practicar:
+Puedes usar esta imagen en formato GIF para practicar:
 
 ![imagen.gif](../img/imagen.gif)
 

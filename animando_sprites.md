@@ -4,11 +4,11 @@ Nuestros sprites hasta ahora pueden desplazarse, pero estaría bien que se anime
 
 La idea es fácil: Tenemos una clase Sprite con un método update en el que podemos modificar la imagen. Sólo necesitamos cargar un array de imágenes que actuarían como fotogramas y usarlas para ir cambiando el atributo image cada cierto tiempo.
 
-Para asegurarnos de que se mueve al ritmo que queramos, vamos a usr un reloj para que, si no han transucrrido los milisegundos que queramos, no cambie la imagen.
+Para asegurarnos de que se mueve al ritmo que queramos, vamos a usar un reloj para que, si no han transcurrido los milisegundos que queramos, no cambie la imagen.
 
 Para nuestra prueba usaremos (además del mismo fondo de los ejemplos anteriores) esta imagen:
 
-![Monigotillo para animaciones](../img/monigotillo.png)
+![Monigotillo para animaciones](recursos/monigotillo.png)
 
 Que tiene una licencia que permite su reutilización y puede encontrarse (junto con otros recursos interesantes) en [este wiki dedicado al juego **Hero of Allacros**](http://www.allacrost.org/wiki/index.php/Artwork_Categories)
 
@@ -98,6 +98,6 @@ main()
 
 En esta prueba hemos usado sólo unas pocas imágenes del original. Puedes probar a modificarlo y mejorarlo añadiendo otras amimaciones y asociándolo al movimiento de la figura.
 
-Notarás que los distintos sprites de la imagen van numerados (hay una pequeña explicación en su página). Para hacer el ejemplo más simple y autoexplicativo se ha recortado y cargado en el array directamente pero, para hacer el movimiento más fluído y realista, se deberían usar en el orden 123145 (la posición cero es para el monigote detenido). Prueba a cambiar eso y verás como la amimación funciona mucho mejor y resulta más realista. 
+Notarás que los distintos sprites de la imagen van numerados (hay una pequeña explicación en su página). Para hacer el ejemplo más simple y autoexplicativo se ha recortado y cargado en el array directamente pero, para hacer el movimiento más fluído y realista, se deberían usar en el orden 123145 (la posición cero es para el monigote detenido). Prueba a cambiar eso y verás como la amimación funciona mucho mejor y resulta más realista.
 
-> Habrás notado que sólo se muestra una serie de vistas de perfil, caminando a la derecha, mientras que no hay una serie ciaminado hacia la izquierda. Esto se hace por ahorrar espacio y trabajo, ya que la imagen se puede "espejar" fácilmente usando el método `flip()` de la [librería pygame.transform](http://www.pygame.org/docs/ref/transform.html). 
+> Habrás notado que sólo se muestra una serie de vistas de perfil, caminando a la derecha, mientras que no hay una serie ciaminado hacia la izquierda. Esto se hace por ahorrar espacio y trabajo, ya que la imagen se puede "espejar" fácilmente usando el método `flip()` de la [librería pygame.transform](http://www.pygame.org/docs/ref/transform.html).

@@ -1,4 +1,4 @@
-##Sobre este libro
+## Sobre este libro
 
 Se supone que se conoce Python
 
@@ -25,7 +25,7 @@ def hola_mundo():
 
 # Llamamos a la función
 hola_mundo()
-``` 
+```
 
 
 Origen

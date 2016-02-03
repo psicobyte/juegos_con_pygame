@@ -15,7 +15,7 @@ Para distribuciones basadas en Debian (Ubuntu, Linux Mint), necesitaremos instal
 # apt-get install python-pygame
 ```
 
-En Archlinux se puede instalar con el gestor de paquetes `pacman` del siguente modo:
+En Archlinux se puede instalar con el gestor de paquetes `pacman` del siguiente modo:
 
 ```bash
 # pacman -S python2-pygame
@@ -60,4 +60,3 @@ Como cualquier otro módulo de **Python**, también es posible instalarlo en cua
 ```
 
 > Para la instalación en otros sistemas operativos, o si surge alguna duda, puedes recurrir a la [página de descargas oficial de Pygame](http://www.pygame.org/download.shtml).
-

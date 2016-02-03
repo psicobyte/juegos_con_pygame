@@ -1,4 +1,4 @@
-##¡Hola Pygame!
+## Primeros pasos
 
 Vamos a dar nuestros primeros pasos en la programación de videojuegos con **Pygame** usando un clásico "Hola Mundo".
 
@@ -62,7 +62,7 @@ while True:
             sys.exit()
 ```
 
-> [RECORDATORIO] `while True` creará un bucle que se ejecuta contínuamente hasta que se sale de él con una instrucción 
+> [RECORDATORIO] `while True` creará un bucle que se ejecuta contínuamente hasta que se sale de él con una instrucción
 `break` o se finaliza el programa por otro medio (como, por ejemplo, con `sys.exit()`).
 
 Para empezar, debes notar que estamos importando `pygame.locals` justo después de importar la librería `pygame` (Bueno, también hemos importado `sys`, pero esa librería no debería necesitar explicación).
@@ -94,4 +94,3 @@ Puedes verlos todos en esta [lista completa de eventos de pygame](http://www.pyg
 > Redibujar la pantalla
 
 > Y vuelta a empezar...
-

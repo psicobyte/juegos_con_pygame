@@ -4,7 +4,7 @@ Dado lo que hemos visto en el tema anterior, mover una imagen no es nada complic
 
 Un detalle importante es que no estamos moviendo nada, simplemente estamos volviendo a dibujar el objeto en otra posición ¡Pero no desaparece del lugar donde estaba dibujado antes!
 
-Esto quiere decir que, a cada cilco de nuestro bucle, debemos redibujar el fondo y todos y cada uno de los objetos.
+Esto quiere decir que, a cada ciclo de nuestro bucle, debemos redibujar el fondo y todos y cada uno de los objetos.
 
 ```
 #!/usr/bin/env python
@@ -136,16 +136,16 @@ Bueno, quizás no es mu elegante, pero es sencillo y deberías pararte un moment
 
 Aunque posiblemente aún no nos hayamos dado cuenta, tenemos otro problema.
 
-Dado que incrementamos las coordenadas en una cantidad fija a cada ciclo del bucle, la velocidad resultante depende de la velocidad a la que se complete el ciclo, y esta puede variar dependiendo del procesador, la carg del sistema, lo que esté haciendo nuetro programa en cada ciclo, etc.
+Dado que incrementamos las coordenadas en una cantidad fija a cada ciclo del bucle, la velocidad resultante depende de la velocidad a la que se complete el ciclo, y esta puede variar dependiendo del procesador, la carga del sistema, lo que esté haciendo nuestro programa en cada ciclo, etc.
 
-¿Hay una forma de asegurarnos que la velocidad es constante indpendientemente de las circunstancias?
+¿Hay una forma de asegurarnos que la velocidad es constante independientemente de las circunstancias?
 
-Bueno, si el procesador donde se ejecuta es muy lento o la máquina está muy sobrecargada, va a ser dificil hacer que vaya más rápido, pero sí podemos limitar la velocidad para que no exceda de cierto nivel.
+Bueno, si el procesador donde se ejecuta es muy lento o la máquina está muy sobrecargada, va a ser difícil hacer que vaya más rápido, pero sí podemos limitar la velocidad para que no exceda de cierto nivel.
 
 Para esto (y para más cosas) tenemos la clase de **Pygame** `Clock`, que se llama del siguiente modo:
 
 ```
-reloj= pygame.time.Clock() 
+reloj= pygame.time.Clock()
 ```
 
 y nos retorna un reloj que podemos usar para muchas cosas, entre las que está establecer un *tic*, un tiempo en milisegundos que limita la velocidad a la que se procesa nuestro bucle principal. Por ejemplo:
@@ -220,11 +220,10 @@ while True:
     reloj.tick(30)
 ```
 
-Fíjate que, en este ejemplo, creamos un reloj al principo del programa y le ponemos el tic de 30 milisegundos dentro del bucle (al final).
+Fíjate que, en este ejemplo, creamos un reloj al principio del programa y le ponemos el tic de 30 milisegundos dentro del bucle (al final).
 
 > Puedes cambiar el tiempo del tic y experimentar con los resultados.
 
 Podemos usar este reloj para muchas otras cosas, como contar el tiempo (lógicamente), sincronizar eventos, hacer animaciones...
 
 > Puedes ver más detalles en la [documentación oficial del módulo "time" de pygame](http://www.pygame.org/docs/ref/time.html)
-

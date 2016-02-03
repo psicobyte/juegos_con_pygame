@@ -4,7 +4,7 @@ En el capítulo anterior hemos creado nuestra primera ventana usando la librerí
 
 En principio, el primer método de esta libreŕia que se debería usar es `display.init()`, que sirve para iniciarla. Sin embargo, `display` ya se inicia automáticamente al hacer `pygame.init()`, por lo que no suele ser necesario utilizarlo.
 
-El sugiente paso es crear nuestra ventana que, como hemos visto, se hace con `display.set_mode()`, pasándole como parámetro una *tupla* (se puede usar también una *lista*) con las dimensiones en *pixels* del ancho y el alto (en ese orden), para crear la ventana. Cambiando esos valores obtendremos ventanas de distintas proporciones.
+El siguiente paso es crear nuestra ventana que, como hemos visto, se hace con `display.set_mode()`, pasándole como parámetro una *tupla* (se puede usar también una *lista*) con las dimensiones en *pixels* del ancho y el alto (en ese orden), para crear la ventana. Cambiando esos valores obtendremos ventanas de distintas proporciones.
 
 > Un *pixel* es un punto en la pantalla. Más adelante veremos esto con más detalle.
 
@@ -43,7 +43,7 @@ while True:
             sys.exit()
 ```
 
-En un juego de verdad, lo más probable es que, para finalizar, llamásemos a una función que pida confirmación al jugador, guarde lo que haya que guardar, etc. Pero, para nuesto pequeño ejemplo, llamar a `sys.exit()` es suficiente.
+En un juego de verdad, lo más probable es que, para finalizar, llamásemos a una función que pida confirmación al jugador, guarde lo que haya que guardar, etc. Pero, para nuestro pequeño ejemplo, llamar a `sys.exit()` es suficiente.
 
 > **Pygame** no puede tener más de un objeto `display` al mismo tiempo. Si intentas crear una ventana en tu programa con `display.set_mode()` cuando ya existe otra, la nueva reemplazará a la anterior.
 
@@ -99,5 +99,3 @@ Para usar más de una de estas constantes se debe usar el signo "|" como separad
 # Pantalla completa, con aceleración por hardware y doble buffer
 pygame.display.set_mode((600, 400), pygame.FULLSCREEN | pygame.DOUBLEBUF | pygame.HWSURFACE)
 ```
-
-

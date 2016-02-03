@@ -1,0 +1,1 @@
+sudo cp /tmp/Dictionaries-master/Spanish.dic /usr/share/atom/resources/app.asar.unpacked/node_modules/spell-check/node_modules/spellchecker/vendor/hunspell_dictionaries/en_US.dic

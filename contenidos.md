@@ -4,7 +4,7 @@
 1. sobre_este_libro.md
 1. que_es_pygame.md
 1. instalacion.md
-1. hola_pygame.md
+1. primeros_pasos.md
 1. la_ventana_de_juego.md
 1. imagenes.md
 1. texto.md
