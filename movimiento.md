@@ -190,7 +190,7 @@ incrementoY = 0
 while True:
 
     ventana.blit(fondo, (0, 0))
-    ventana.blit(imagen, Coordenadas)
+    ventana.blit(imagen, coordenadas)
     pygame.display.flip()
 
    # Manejador de eventos

@@ -14,20 +14,20 @@ Veamos un ejemplo sencillo de creación de un sprite (supongamos que es un monst
 
 ```
 # Creamos nuesto sprite:
-MiMonstruo = pygame.sprite.Sprite()
+mi_monstruo = pygame.sprite.Sprite()
 # Le asignamos una imagen...
-MiMonstruo.image = ImagenMonstruosa
+mi_monstruo.image = ImagenMonstruosa
 # ...y un rectángulo
-MiMonstruo.rect = MiMonstruo.image.get_rect()
+mi_monstruo.rect = mi_monstruo.image.get_rect()
 
 # Posicionamos el monstruo:
-MiMonstruo.rect.topleft = (100, 100)
+mi_monstruo.rect.topleft = (100, 100)
 
 # Y hacemos blit de la imagen y del rectángulo
-Ventana.blit(MiMonstruo.image, MiMonstruo.rect)
+Ventana.blit(mi_monstruo.image, mi_monstruo.rect)
 ```
 
-En la primera línea creamos nuestro objeto *MiMonstruo* como una instancia de la clase pygame.sprite.Sprite
+En la primera línea creamos nuestro objeto *mi_monstruo* como una instancia de la clase pygame.sprite.Sprite
 
 Le asignamos una imagen (que debe ser un objeto surface) y, seguidamente, un rectángulo (objeto rect).
 
@@ -55,7 +55,7 @@ class Monstruo(pygame.sprite.Sprite):
    def update(self, nuevas_coordenadas):
         self.rect.topleft = nuevas_coordenadas
 
-MiMonstruo = Monstruo((100, 100), ImagenMonstruosa)
+mi_monstruo = Monstruo((100, 100), ImagenMonstruosa)
 ```
 
 Hemos hecho lo mismo del ejemplo anterior pero creando una nueva clase Monstruo. Además, estamos usando el método `update` (que existe en la clase `Sprite` pero no hace nada por defecto) que nos resultará muy útil para actualizar todos los cambios  que sean necesarios en nuestro sprite (en este caso, lo usamos para cambiar la posición).
