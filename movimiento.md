@@ -39,7 +39,7 @@ coordenadas = (coordX, coordY)
 while True:
 
     ventana.blit(fondo, (0, 0))
-    ventana.blit(imagen, Coordenadas)
+    ventana.blit(imagen, coordenadas)
     pygame.display.flip()
 
     # Manejador de eventos
@@ -181,7 +181,7 @@ imagen = pygame.image.load("imagen.png")
 
 coordX = 300
 coordY = 200
-Coordenadas = (coordX, coordY)
+coordenadas = (coordX, coordY)
 
 incrementoX = 0
 incrementoY = 0

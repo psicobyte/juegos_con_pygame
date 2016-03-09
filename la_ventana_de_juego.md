@@ -99,3 +99,5 @@ Para usar más de una de estas constantes se debe usar el signo "|" como separad
 # Pantalla completa, con aceleración por hardware y doble buffer
 pygame.display.set_mode((600, 400), pygame.FULLSCREEN | pygame.DOUBLEBUF | pygame.HWSURFACE)
 ```
+
+Para saber si un modo de display está disponible en el hardware en el que se está ejecutando nuestro juego, tenemos la función `pygame.display.mode_ok()`. Esta función admite los mismos parámetros que `display.set_mode()`, y retorna un número entero indicando la mejor profundidad de color para esos parámetros. En caso de que ese modo de display no sea soportado por el hardware, la función retorna un valor cero. El principal uso de esta función es para asegurarnos la validez de flags como `pygame.HWSURFACE` o `pygame.DOUBLEBUF`.
