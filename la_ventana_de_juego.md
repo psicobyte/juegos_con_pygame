@@ -4,6 +4,8 @@ En el capítulo anterior hemos creado nuestra primera ventana usando la librerí
 
 En principio, el primer método de esta libreŕia que se debería usar es `display.init()`, que sirve para iniciarla. Sin embargo, `display` ya se inicia automáticamente al hacer `pygame.init()`, por lo que no suele ser necesario utilizarlo.
 
+Si fuera necesario _desiniciar_ el módilo, podemos usar el método `pygame.display.quit()` (por otro lado, el método `pygame.display.get_init()` retorna un valor _True_ si la libería `pygame.display` está iniciada y _False_ si no lo está).
+
 El siguiente paso es crear nuestra ventana que, como hemos visto, se hace con `display.set_mode()`, pasándole como parámetro una *tupla* (se puede usar también una *lista*) con las dimensiones en *pixels* del ancho y el alto (en ese orden), para crear la ventana. Cambiando esos valores obtendremos ventanas de distintas proporciones.
 
 > Un *pixel* es un punto en la pantalla. Más adelante veremos esto con más detalle.
