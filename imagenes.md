@@ -122,7 +122,7 @@ Para que esto funcione es necesario que la imagen tenga un color de fondo unifor
 
 Puedes usar esta imagen en formato GIF para practicar:
 
-![imagen.gif](../img/imagen.gif)
+![imagen.gif](../master/recursos/imagen.gif)
 
 Un método interesante es `subsurface()`, que permite extraer una imagen (objeto surface) como parte de otra. Es decir, crea una imagen a partir de un "recorte" de otra mayor. Se usa de este modo:
 
