@@ -61,7 +61,7 @@ Para los siguientes ejemplos vamos a usar una imagen de fondo que es obra de [Li
 
 También usaremos una pequeña imagen con el logo de la [Oficina de Softwre libre de la Universidad de Granada](http://osl.ugr.es)
 
-![imagen.png](../img/imagen.png)
+![imagen.png](../master/recursos/imagen.png)
 
 > Nota que estamos usando una imagen JPG y otra PNG indistintamente, **Pygame** se ocupa de ello por nosotros.
 
