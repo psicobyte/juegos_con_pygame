@@ -4,13 +4,13 @@ Pygame dispone del módulo `pygame.mixer` para manipular sonidos.
 
 Para nuestro ejemplo vamos a usar como "efecto especial" el siguiente archivo de audio:
 
-[ouch.wav](../img/ouch.wav)
+[ouch.wav](../master/recursos/ouch.wav)
 
 Creado por [Under7dude](http://www.freesound.org/people/Under7dude/) y de dominio público.
 
 Y para la "música de ambiente" este otro:
 
-[guitarra.wav](../img/guitarra.wav)
+[guitarra.wav](../master/recursos/guitarra.wav)
 
 Creado por [eltenjohn](http://www.freesound.org/people/eltenjohn/) y también en el dominio público.
 

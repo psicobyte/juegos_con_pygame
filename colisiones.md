@@ -18,7 +18,7 @@ A menudo, sobre todo por el uso de transparencias, la imagen de un sprite no coi
 
 Por ejemplo, en el siguiente dibujo, al ser el sprite circular, las esquinas son transparentes (aquí las vemos en azul):
 
-![imagen.gif](../img/imagen.gif)
+![imagen.gif](../master/recursos/imagen.gif)
 
 Si dos sprites así colisionaran diagonalmente, sus rectángulos chocarían aunque nosotros viésemos dos círculos que no se tocan. En estos casos, a veces es más conveniente usar métodos de calcular la colisión alternativos.
 

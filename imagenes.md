@@ -61,7 +61,7 @@ Para los siguientes ejemplos vamos a usar una imagen de fondo que es obra de [Li
 
 También usaremos una pequeña imagen con el logo de la [Oficina de Softwre libre de la Universidad de Granada](http://osl.ugr.es)
 
-![imagen.png](../img/imagen.png)
+![imagen.png](../master/recursos/imagen.png)
 
 > Nota que estamos usando una imagen JPG y otra PNG indistintamente, **Pygame** se ocupa de ello por nosotros.
 
@@ -122,7 +122,7 @@ Para que esto funcione es necesario que la imagen tenga un color de fondo unifor
 
 Puedes usar esta imagen en formato GIF para practicar:
 
-![imagen.gif](../img/imagen.gif)
+![imagen.gif](../master/recursos/imagen.gif)
 
 Un método interesante es `subsurface()`, que permite extraer una imagen (objeto surface) como parte de otra. Es decir, crea una imagen a partir de un "recorte" de otra mayor. Se usa de este modo:
 

@@ -71,4 +71,4 @@ while True:
 
 > Fíjate que, una vez renderizado el texto con `render`, lo que obtenemos es una `surface` con la que podemos hacer exactamente las mismas cosas que con cualquier otra `surface`. 
 
-Además de lo que hemos visto, el [módulo `font` de pygame](www.pygame.org/docs/ref/font.html) nos aporta algunas otras herramientas para manipular fuentes.
+Además de lo que hemos visto, el [módulo `font` de pygame](http://www.pygame.org/docs/ref/font.html) nos aporta algunas otras herramientas para manipular fuentes.
